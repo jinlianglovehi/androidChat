@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/DIMEN_108PX"
+    android:background="#000000" >
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="marquee"
+        android:gravity="center_horizontal|center"
+        android:singleLine="true"
+        android:text="@string/robot"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/text_title" />
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="70dp"
+        android:layout_height="@dimen/DIMEN_108PX"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/button_backward"
+            android:layout_width="@dimen/DIMEN_44PX"
+            android:layout_height="@dimen/DIMEN_44PX"
+            android:background="@drawable/title_button_selector"
+            android:onClick="onClick"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_forward"
+        android:layout_width="@dimen/DIMEN_144PX"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/title_button_selector"
+        android:drawablePadding="@dimen/DIMEN_15PX"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:paddingLeft="@dimen/DIMEN_12PX"
+        android:singleLine="true"
+        android:text="@string/submit"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

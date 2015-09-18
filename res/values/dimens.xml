@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+        <!-- XListView -->
+    <dimen name="xlistview_layout_width_60">60dp</dimen>
+    <dimen name="xlistview_layout_width_3">3dp</dimen>
+    <dimen name="xlistview_layout_width_30">30dp</dimen>
+    <dimen name="xlistview_layout_width_10">10dp</dimen>
+    <dimen name="xlistview_layout_width_35">-35dp</dimen>
+    <dimen name="xlistview_layout_width_40">-40dp</dimen>
+    <dimen name="xlistview_ts_layout_width_12">12sp</dimen>
+    
+	<dimen name="bbuton_rounded_corner_radius">5dp</dimen>
+</resources>

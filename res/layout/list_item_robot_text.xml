@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/DIMEN_12PX"
+    android:layout_marginLeft="@dimen/DIMEN_48PX"
+    android:orientation="vertical" >
+
+    <!-- 中间提醒内容 -->
+
+    <TextView
+        android:id="@+id/center_Remind_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/DIMEN_24PX"
+        android:lineSpacingExtra="@dimen/DIMEN_12PX"
+        android:textSize="12sp"
+        android:visibility="gone" />
+    <!-- 机械人的名称 -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_48PX"
+        android:layout_marginTop="@dimen/DIMEN_24PX"
+        android:lineSpacingExtra="@dimen/DIMEN_12PX"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp" />
+
+    <!-- 机械人的消息内容 -->
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_36PX"
+        android:layout_marginRight="@dimen/DIMEN_168PX"
+        android:layout_marginTop="@dimen/DIMEN_12PX"
+        android:background="@drawable/chatfrom_bg_normal"
+        android:orientation="vertical" >
+
+        <!-- 文本 -->
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_24PX"
+            android:layout_marginBottom="@dimen/DIMEN_7PX"
+            android:layout_marginRight="@dimen/DIMEN_24PX"
+            android:layout_marginTop="@dimen/DIMEN_21PX"
+            android:lineSpacingExtra="@dimen/DIMEN_5PX"
+            android:textSize="16sp"
+            android:autoLink="email|phone|web" 
+            android:visibility="gone" />
+
+   <!--      机械人回复  单文本消息
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/DIMEN_20PX"
+            android:layout_marginLeft="@dimen/DIMEN_24PX"
+            android:layout_marginRight="@dimen/DIMEN_24PX"
+            android:layout_marginTop="@dimen/DIMEN_20PX"
+            android:autoLink="web"
+            android:lineSpacingExtra="1dp"
+            android:textSize="12sp"
+            android:visibility="gone" /> -->
+        <!-- 机械人的答案列表 -->
+
+        <!-- 图片 start -->
+        <ImageView
+            android:id="@+id/simple_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginRight="1dip"
+            android:contentDescription="@null"
+            android:gravity="left"
+            android:maxWidth="@dimen/DIMEN_480PX"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+         <!-- 图片  end -->
+         <!-- 语音的格式 -->
+         <LinearLayout
+            android:id="@+id/ll_voice_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/DIMEN_12PX"
+            android:orientation="horizontal"
+            android:layout_marginTop="3dp"
+            android:visibility="gone">
+            <!-- 显示语音的图片 -->
+            <ImageView
+                android:id="@+id/audio_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/pop_voice_receive_anime_3"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/voiceTimeLong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_24PX"
+                android:layout_marginRight="@dimen/DIMEN_12PX"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <!-- 富文本的操作   end  -->
+        <ImageView
+            android:id="@+id/bigPicImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dip"
+            android:layout_marginTop="3dip"
+            android:layout_marginRight="1dip"
+            android:maxHeight="@dimen/DIMEN_240PX"
+            android:maxWidth="@dimen/DIMEN_480PX"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/rendAllText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="阅读全文>>"
+            android:visibility="gone" />
+          <!-- 富文本的操作 end  -->
+        
+
+
+        <!-- 回复语的操作  -->
+        <TextView
+            android:id="@+id/stripe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/DIMEN_24PX"
+            android:layout_marginRight="@dimen/DIMEN_24PX"
+            android:layout_marginTop="@dimen/DIMEN_20PX"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        
+        <!--回答语的操作 -->
+        <LinearLayout
+            android:id="@+id/answersList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/DIMEN_20PX"
+            android:layout_marginLeft="@dimen/DIMEN_36PX"
+            android:layout_marginRight="@dimen/DIMEN_36PX"
+            android:orientation="vertical"
+            android:layout_marginTop="3dip"
+            android:visibility="gone" >
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

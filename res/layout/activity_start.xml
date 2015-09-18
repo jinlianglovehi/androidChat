@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/startImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@null" >
+    </ImageView>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+    <TextView
+        android:id="@+id/sysNumLable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please" />
+
+    <EditText
+        android:id="@+id/sysNum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sysNumLable"
+        android:text="10a3522af094480085126047a1f901ad"
+        android:inputType="text" />
+       <!--  android:text="0a88b1e206574af09ecd608b8e927a81" -->
+    <!--  android:text="5a254db3feac4d19abcca002b2344ddc" 吴乐-->
+  <!-- android:text="df60ea2a8fa74440aacd687cb2de62f8" -->
+  <!-- android:text="10a3522af094480085126047a1f901ad"最新申请 -->
+  <!-- android:text="be99cce4876c41c1854a275c55b8e68b" -->
+  <!-- android:text="7edde35638bd4aa78d30750ce237cc82" 王泽-->
+  <!-- android:text="9d475cc157dd4ad49e9a16b78c7b033c" 王莲-->
+  
+  <!-- 杨兴成给的 38047420624b46b0be15c7aef30af3ab -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sysNum"
+        android:text="启动" />
+</RelativeLayout>
+</RelativeLayout>

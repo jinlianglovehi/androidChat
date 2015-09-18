@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="rengongbutton">#0FC481</color>
+    <color name="welcomeBackcolor">#019587</color>
+    <color name="viewpagerbackground">#EBEBEB</color>
+    <!-- tab底部栏目的切换 -->
+    <color name="title_category_select_color">#A52A2A</color>
+    <color name="title_category_unselect_color">#B23AEE</color>
+    
+    <!-- 标题栏按钮背景颜色 -->
+    <drawable name="button_backward_pressed">#FF3030</drawable>
+    <drawable name="button_backward_normal">#0000</drawable>
+    
+    
+    <!-- 注册界面 样式 -->
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="gray">#DBDBDB</color>
+    
+    <!-- 八个主题颜色 -->
+    <color name="color1">#09aeb0</color>
+    
+        <color name="bg_black">#666F6F</color>
+        <color name="bg_white">#FFFFFF</color>
+		<color name="bbutton_danger">#ffd9534f</color>
+		<color name="bbutton_danger_edge">#ffd43f3a</color>
+		<color name="bbutton_danger_pressed">#ffd2322d</color>
+		<color name="bbutton_danger_pressed_edge">#ffac2925</color>	
+		<color name="bbutton_danger_disabled">#a5d9534f</color>
+		<color name="bbutton_danger_disabled_edge">#a5d43f3a</color>
+		
+		<color name="bbutton_info">#ff5bc0de</color>
+		<color name="bbutton_info_edge">#ff46b8da</color>
+		<color name="bbutton_info_pressed">#ff39b3d7</color>
+		<color name="bbutton_info_pressed_edge">#ff269abc</color>
+		<color name="bbutton_info_disabled">#a55bc0de</color>
+		<color name="bbutton_info_disabled_edge">#a546b8da</color>
+</resources>

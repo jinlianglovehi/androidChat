@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 我的 中间提醒内容 -->
+
+    <TextView
+        android:id="@+id/center_Remind_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 我的名称 -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/DIMEN_48PX"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- 我的消息的内容 -->
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/DIMEN_48PX"
+        android:autoLink="web"
+        android:background="@drawable/chatto_bg_normal"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 对方发送发的图片 -->
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/DIMEN_168PX"
+        android:layout_marginRight="@dimen/DIMEN_116PX"
+        android:layout_marginTop="@dimen/DIMEN_13PX"
+        android:background="@drawable/chatto_bg_normal"
+        android:layout_gravity="right"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relative_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <!-- 显示图片的信息 -->
+
+            <ImageView
+                android:id="@+id/iv_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:gravity="left"
+                android:maxWidth="@dimen/DIMEN_480PX"
+                android:scaleType="fitXY"
+                android:padding="1dp"
+                android:visibility="visible" />
+            <!-- 上传图片的加载的进度显示 -->
+
+            <ProgressBar
+                android:id="@+id/pic_progress"
+                android:layout_width="@dimen/DIMEN_24PX"
+                android:layout_height="@dimen/DIMEN_24PX"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+        <!-- 图片的发送状态 -->
+
+        <ImageView
+            android:id="@+id/pic_send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

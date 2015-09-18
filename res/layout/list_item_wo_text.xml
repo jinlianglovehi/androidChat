@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="@dimen/DIMEN_48PX"
+    android:orientation="vertical" >
+
+    <!-- 我的 中间提醒内容 -->
+
+    <TextView
+        android:id="@+id/center_Remind_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/DIMEN_36PX"
+        android:background="@drawable/toast_selector"
+        android:lineSpacingExtra="@dimen/DIMEN_12PX"
+        android:textColor="#fefefe"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 我的名称 -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/DIMEN_24PX"
+        android:lineSpacingExtra="@dimen/DIMEN_12PX"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- 我的消息的内容 -->
+
+    <LinearLayout
+        android:id="@+id/my_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/DIMEN_168PX"
+        android:layout_marginTop="@dimen/DIMEN_36PX" >
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="@dimen/DIMEN_48PX"
+            android:layout_height="@dimen/DIMEN_48PX"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/msgStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/re_send_selector"
+                android:contentDescription="@null"
+                android:text="@string/resend"
+                android:textSize="16sp"
+                android:visibility="gone" />
+            
+            <!-- 消息的状态 -->
+            <ProgressBar
+                android:id="@+id/msgProgressBar" 
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 style="@android:style/Widget.ProgressBar.Small"
+                 android:visibility="gone" 
+               />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/DIMEN_36PX"
+            android:background="@drawable/chatto1_bg_normal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/DIMEN_10PX"
+                android:layout_marginLeft="@dimen/DIMEN_20PX"
+                android:layout_marginRight="@dimen/DIMEN_20PX"
+                android:layout_marginTop="2dp"
+                android:autoLink="email|phone|web" 
+                android:lineSpacingExtra="1dp"
+                android:text="@string/chat_content"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/DIMEN_7PX"
+                android:layout_marginRight="@dimen/DIMEN_7PX"
+                android:autoLink="web"
+                android:background="#FF0000"
+                android:lineSpacingExtra="@dimen/DIMEN_12PX"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/DIMEN_48PX"
+                android:layout_marginRight="@dimen/DIMEN_96PX"
+                android:contentDescription="@null"
+                android:lineSpacingExtra="@dimen/DIMEN_12PX"
+                android:maxHeight="@dimen/DIMEN_240PX"
+                android:maxWidth="@dimen/DIMEN_480PX"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
+            <!-- 图片的发送状态 -->
+
+            <TextView
+                android:id="@+id/pic_send_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:lineSpacingExtra="@dimen/DIMEN_12PX"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

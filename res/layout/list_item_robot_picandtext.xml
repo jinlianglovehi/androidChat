@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 图文混排的样式 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chatfrom_bg_normal"
+        android:orientation="vertical" >
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/picandtext_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="你好，请登录" />
+        <!-- 图片信息 -->
+
+        <ImageView
+            android:id="@+id/picandtext_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+        <!-- 阅读全文的链接 -->
+
+        <TextView
+            android:id="@+id/picandtext_weblink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 回复序号对应答案 -->
+        <TextView
+            android:id="@+id/picandtext_stricp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 问题list -->
+        <LinearLayout
+            android:id="@+id/picandtext_answerlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+          <!-- 问题的list列表 -->
+          <!-- <TextView
+                android:id="@+id/answer01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="andwer01" />
+
+            <TextView
+                android:id="@+id/answer02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="andwer02" />
+
+            <TextView
+                android:id="@+id/answer03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="andwer03" /> -->
+                
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

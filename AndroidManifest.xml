@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sobot.chat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <!-- 访问权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 融云权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:name="com.sobot.chat.application.MyApplication"
+        android:label="@string/app_name"
+        android:hardwareAccelerated="false" 
+        android:theme="@style/AppTheme" >
+
+        <!-- 主界面 -->
+        <activity android:name="com.sobot.chat.activity.StartActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sobot.chat.activity.SobotChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity android:name="com.sobot.chat.activity.RobotLoadingActivity" />
+        <activity android:name="com.sobot.chat.activity.PhotoActivity" />
+        <service
+            android:name="com.sobot.chat.PushService"
+            android:process="com.sobot.chat.push" > <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.sobot.chat" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.sobot.chat.CommandService"
+            android:process="com.sobot.chat.push" > <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.sobot.chat.command" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.sobot.chat.PushReceiver"
+            android:process="com.sobot.chat.push" > <!-- Waring: The name of the push process can't be changed!!! -->
+            <intent-filter>
+                <action android:name="com.sobot.chat.HeartBeat" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.sobot.chat.RongService"
+            android:process=":ipc" >
+        </service>
+        <service android:name="com.sobot.chat.ReConnectService" />
+
+        <receiver android:name="com.sobot.chat.ConnectChangeReceiver" />
+        <receiver android:name="com.sobot.chat.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="com.sobot.chat.push.message" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.sobot.chat.HeartbeatReceiver"
+            android:process=":ipc" />
+	 
+
+    </application>
+
+</manifest>

@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:weightSum="2" >
+
+    <RelativeLayout
+        android:id="@+id/btn_picture_r"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/btn_picture"
+            android:layout_width="@dimen/DIMEN_288PX"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/login_edit_nomal1"
+            android:drawableLeft="@drawable/uploadpicture"
+            android:drawablePadding="@dimen/DIMEN_14PX"
+            android:text="@string/upload"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_take_picture_r"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/btn_take_picture"
+            android:layout_width="@dimen/DIMEN_288PX"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/login_edit_nomal1"
+            android:drawableLeft="@drawable/takephoto"
+            android:drawablePadding="@dimen/DIMEN_14PX"
+            android:paddingLeft="@dimen/DIMEN_72PX"
+            android:text="@string/attach_take_pic"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

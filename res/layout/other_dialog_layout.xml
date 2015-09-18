@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:minWidth="@dimen/DIMEN_624PX"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_custom_dialog2"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="@dimen/DIMEN_72PX" >
+        
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/end"
+            android:textSize="18sp" />
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title_custom_dialog1"
+        android:paddingTop="@dimen/DIMEN_72PX"
+        android:gravity="center">
+
+            <Button
+                android:id="@+id/positiveButton"
+                android:layout_width="@dimen/DIMEN_180PX"
+                android:layout_height="@dimen/DIMEN_120PX"
+                android:background="@drawable/button_style"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/negativeButton"
+                android:layout_width="@dimen/DIMEN_180PX"
+                android:layout_height="@dimen/DIMEN_120PX"
+                android:layout_marginLeft="@dimen/DIMEN_72PX"
+                android:layout_toRightOf="@+id/positiveButton"
+                android:background="@drawable/subbutton_shap"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_custom_dialog1"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/DIMEN_120PX">
+    </LinearLayout>
+
+</LinearLayout>

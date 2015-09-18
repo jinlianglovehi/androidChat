@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd" >
+
+    <!-- 自动播放Gif动画 -->
+
+    <com.sobot.chat.weight.PowerImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/loding" />
+
+    <!-- 显示加载文字的动画 -->
+
+    <TextView
+        android:id="@+id/txt_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:text="@string/welcome"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textReConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dip"
+        android:text="当前网络不可用,请检查网络设置"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/icon_nonet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textReConnect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dip"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_nonet"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_reconnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textReConnect"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/button_style"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="点击重新连接"
+        android:visibility="gone" />
+
+</RelativeLayout>
